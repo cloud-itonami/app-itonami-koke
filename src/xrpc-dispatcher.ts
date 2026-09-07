@@ -1,3 +1,11 @@
+// SVELTEKIT-BACKEND-PRESERVED: moved out of svelte/ during the cljs migration; not wired.
+//
+// Moved verbatim from svelte/src/routes/xrpc/[...path]/+server.ts.
+// It imports '@sveltejs/kit' and './$types' so it cannot run without the SvelteKit
+// build that no longer exists in this repo (svelte/ was removed during the cljs migration).
+// Whether to revive this as a standalone Worker route is an undecided product decision,
+// not part of this migration.
+//
 import { json, type RequestEvent } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
