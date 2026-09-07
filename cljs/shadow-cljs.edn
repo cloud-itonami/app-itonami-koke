@@ -1,0 +1,9 @@
+;; com-etzhayyim-app-koke — single-page app, single build/module (migrated from svelte).
+{:deps   {:aliases [:cljs :test]}
+ :builds {:app  {:target :browser
+                 :output-dir "public/js"
+                 :asset-path "js"
+                 :modules {:app {:init-fn koke.app/main}}}
+          :test {:target :node-test
+                 :output-to "out/tests.js"
+                 :ns-regexp "-test$"}}}
