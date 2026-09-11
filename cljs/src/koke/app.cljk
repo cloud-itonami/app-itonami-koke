@@ -35,7 +35,7 @@
   Regenerate that shell (e.g. if jp-go-dds's core components or ext-rules
   change) with (from the superproject root, nbb, no JVM):
 
-    nbb --classpath \"orgs/kotoba-lang/jp-go-digital-design-system/src:orgs/kotoba-lang/jp-go-digital-design-system/resources:orgs/kotoba-lang/html/src:orgs/kotoba-lang/css/src\" render.cljs cljs/public/index.html \"<description>\""
+    kbb --backend sci --classpath \"orgs/kotoba-lang/jp-go-digital-design-system/src:orgs/kotoba-lang/jp-go-digital-design-system/resources:orgs/kotoba-lang/html/src:orgs/kotoba-lang/css/src\" render.cljs cljs/public/index.html \"<description>\""
   (:require [reagent.dom :as rdom]
             [re-frame.core :as rf]
             [jp-go-dds.core :as dds]))
