@@ -7,7 +7,7 @@
  *   listOffsets     — cursor + project filter
  */
 
-import type { Etzhayyim } from "@etzhayyim/sdk";
+import type { LocalStore } from "../local-store.js";
 import {
   batchRkey,
   releaseRkey,
@@ -30,7 +30,7 @@ const RELEASE_COLLECTION = "cloud.itonami.koke.release";
 const OFFSET_COLLECTION = "cloud.itonami.koke.offset";
 
 export async function registerCarbon(
-  e: Etzhayyim,
+  e: LocalStore,
   input: RegisterCarbonInput
 ): Promise<RegisterCarbonOutput> {
   // Validation: missing required fields
@@ -74,7 +74,7 @@ export async function registerCarbon(
 }
 
 export async function releaseCarbon(
-  e: Etzhayyim,
+  e: LocalStore,
   input: ReleaseCarbonInput
 ): Promise<ReleaseCarbonOutput> {
   // Validation: missing required fields (before checking idempotency)
@@ -117,7 +117,7 @@ export async function releaseCarbon(
 }
 
 export async function recordOffset(
-  e: Etzhayyim,
+  e: LocalStore,
   input: RecordOffsetInput
 ): Promise<RecordOffsetOutput> {
   // Validation: missing required fields (before checking idempotency)
@@ -161,7 +161,7 @@ export async function recordOffset(
 }
 
 export async function listOffsets(
-  e: Etzhayyim,
+  e: LocalStore,
   input: ListOffsetsInput = {}
 ): Promise<ListOffsetsOutput> {
   const limit = Math.min(input.limit ?? 50, 100);

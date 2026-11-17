@@ -1,17 +1,18 @@
-import { describe, it, expect, beforeEach } from "vitest";
-import { MockEtzhayyim } from "@etzhayyim/sdk-mock";
+import { describe, it, beforeEach } from "node:test";
+import { expect } from "./expect.mjs";
+import { LocalStore } from "../dist/local-store.js";
 import {
   registerCarbon,
   releaseCarbon,
   recordOffset,
   listOffsets,
-} from "../src/index.js";
+} from "../dist/domain/index.js";
 
 describe("koke kotoba", () => {
   let e: any;
 
   beforeEach(() => {
-    e = new MockEtzhayyim({ did: "did:web:koke.itonami.cloud" });
+    e = new LocalStore({ did: "did:web:koke.itonami.cloud" });
   });
 
   describe("registerCarbon", () => {
