@@ -1,6 +1,6 @@
 # koke kotoba
 
-Phase E Option B reference implementation of koke (苔 / moss) on the etzhayyim substrate.
+Phase E Option B reference implementation of koke (苔 / moss) on the itonami substrate.
 
 Per [ADR-2605203000](../../../90-docs/adr/2605203000-kotoba-write-target-options.md), koke migrates from vendor's `createKyselyDb` pattern to **Option B** — PDS XRPC writes via `@etzhayyim/sdk e.write()`.
 
@@ -20,7 +20,7 @@ koke (fixSignal)  →  hakkou (startFerment)  →  ki (absorb)
 ## Authority-chain DIDs
 
 ```
-did:web:koke.etzhayyim.com:fixation:{fixationId-slug}    — Fixation (glucose)
+did:web:koke.itonami.cloud:fixation:{fixationId-slug}    — Fixation (glucose)
 ```
 
 ## Sibling reference impls

@@ -1,5 +1,5 @@
 (ns koke.app
-  "com-etzhayyim-app-koke appview — reagent + re-frame, view built from
+  "app-itonami-koke appview — reagent + re-frame, view built from
   jp-go-dds (デジタル庁デザインシステム) hiccup.
 
   Faithful port of the previous SvelteKit scaffold's status page
@@ -46,9 +46,9 @@
 ;; (title/project/name/kind/routeCount/routes/vars/xrpc/relativePath).
 
 (def default-db
-  {:app/title "Ai etzhayyim Project Koke"
-   :app/project "etzhayyim-project-koke"
-   :app/name "etzhayyim-project-koke"
+  {:app/title "Ai itonami Project Koke"
+   :app/project "itonami-project-koke"
+   :app/name "itonami-project-koke"
    :app/kind "cloudflare surface"
    :app/route-count 0
    :app/routes []

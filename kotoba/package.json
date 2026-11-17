@@ -1,7 +1,7 @@
 {
-  "name": "@etzhayyim/koke-kotoba",
+  "name": "@itonami/koke-kotoba",
   "version": "0.1.0",
-  "description": "Phase E Option B reference impl of koke (fixation) on the etzhayyim substrate",
+  "description": "Phase E Option B reference impl of koke (fixation) on the itonami substrate",
   "type": "module",
   "main": "src/index.ts",
   "private": true,
