@@ -8,7 +8,7 @@ import {
   extractBearerToken,
   type Etzhayyim,
 } from "@etzhayyim/sdk-auth";
-import * as rwFree from "@etzhayyim/koke-kotoba";
+import * as rwFree from "@itonami/koke-kotoba";
 
 interface Env {
   ACTOR_DID: string;
@@ -20,7 +20,7 @@ interface Env {
 
 type Handler = (e: Etzhayyim, input: unknown) => Promise<unknown>;
 
-const NSID_BASE = "com.etzhayyim.koke";
+const NSID_BASE = "cloud.itonami.koke";
 
 interface RouteConfig {
   method: "POST" | "GET";

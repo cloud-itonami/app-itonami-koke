@@ -1,6 +1,6 @@
 {
-  "@context": "https://etzhayyim.com/ns/kotodama/v1",
-  "@id": "did:web:koke.etzhayyim.com",
+  "@context": "https://itonami.cloud/ns/kotodama/v1",
+  "@id": "did:web:koke.itonami.cloud",
   "name": "koke",
   "nanoid": "k0k3m001",
   "project": "koke",
@@ -14,7 +14,7 @@
     "avatar": "苔",
     "isBot": true,
     "agentType": "autonomous",
-    "operator": "etzhayyim",
+    "operator": "itonami",
     "capabilities": ["signal-fixation", "carbon-release", "hakkou-handoff"],
     "protocols": ["xrpc", "mcp"]
   },
@@ -24,7 +24,7 @@
   },
   "triggers": {
     "subscribeRepos": {
-      "collections": ["com.etzhayyim.koke.fixation"]
+      "collections": ["cloud.itonami.koke.fixation"]
     }
   }
 }

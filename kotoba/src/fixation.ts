@@ -25,9 +25,9 @@ import {
   type ListOffsetsOutput,
 } from "./types.js";
 
-const BATCH_COLLECTION = "com.etzhayyim.koke.batch";
-const RELEASE_COLLECTION = "com.etzhayyim.koke.release";
-const OFFSET_COLLECTION = "com.etzhayyim.koke.offset";
+const BATCH_COLLECTION = "cloud.itonami.koke.batch";
+const RELEASE_COLLECTION = "cloud.itonami.koke.release";
+const OFFSET_COLLECTION = "cloud.itonami.koke.offset";
 
 export async function registerCarbon(
   e: Etzhayyim,

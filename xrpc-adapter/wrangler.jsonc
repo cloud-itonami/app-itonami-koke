@@ -7,10 +7,10 @@
   "account_id": "4da88288dc30d9ee257f319d3c33ecf0",
   "workers_dev": false,
   "vars": {
-    "ACTOR_DID": "did:web:koke.etzhayyim.com",
-    "PDS_URL": "https://pds.etzhayyim.com",
+    "ACTOR_DID": "did:web:koke.itonami.cloud",
+    "PDS_URL": "https://pds.itonami.cloud",
     "L2_RPC_URL": "https://mainnet.base.org"
   },
-  "routes": [{"pattern": "koke.etzhayyim.com/xrpc/*", "zone_name": "etzhayyim.com"}],
+  "routes": [{"pattern": "koke.itonami.cloud/xrpc/*", "zone_name": "itonami.cloud"}],
   "observability": {"enabled": true}
 }

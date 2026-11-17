@@ -13,7 +13,7 @@
  *   listOffsets     → cursor + project filter
  */
 
-export const KOKE_DID_PREFIX = "did:web:koke.etzhayyim.com:" as const;
+export const KOKE_DID_PREFIX = "did:web:koke.itonami.cloud:" as const;
 
 // ─── Carbon Batch ───────────────────────────────────────────────────
 
