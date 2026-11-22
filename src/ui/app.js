@@ -1,6 +1,7 @@
 // Generic local UI for an itonami app. It renders one form per action declared
 // in app-def.js and lists the records the app keeps on this device. It builds
 // DOM from text nodes only (no HTML strings) and makes no network request.
+import { hostInfo } from "./host-info.js";
 import { LocalStore } from "./local-store.js";
 import { app } from "./app-def.js";
 
@@ -118,5 +119,6 @@ function renderNotice() {
 }
 
 render();
-const tauri = globalThis.__TAURI__;
-if (tauri?.core?.invoke) tauri.core.invoke("awai_host_info").then((info) => { document.getElementById("env").textContent = info?.app ?? ""; }).catch(() => {});
+// The host packaging passes the app id in (dist/host-info.js, KOTOBA-159), so no IPC is needed:
+// a restricted-wasm-v1 guest has no Tauri globals.
+document.getElementById("env").textContent = hostInfo.app;
