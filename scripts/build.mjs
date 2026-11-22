@@ -22,6 +22,9 @@ await rm(out, { recursive: true, force: true });
 await mkdir(join(out, "domain"), { recursive: true });
 
 for (const name of ["index.html", "style.css", "app.js"]) await copyFile(resolve(root, "src/ui", name), join(out, name));
+// The value the Tauri host's awai_host_info returned, passed in by the packaging instead (KOTOBA-159).
+const tauriConf = JSON.parse(await readFile(resolve(root, "src-tauri/tauri.conf.json"), "utf8"));
+await writeFile(join(out, "host-info.js"), `export const hostInfo = ${JSON.stringify({ schema: "awai.shell.host.v1", app: tauriConf.identifier })};\n`);
 for (const name of ["local-store.js", "app-def.js"]) await copyFile(resolve(root, "src", name), join(out, name));
 
 const domainDir = resolve(root, "src/domain");
@@ -44,7 +47,7 @@ const descriptor = {
 };
 await writeFile(join(out, "descriptor.json"), JSON.stringify(descriptor, null, 2) + "\n");
 
-const names = ["index.html", "style.css", "app.js", "local-store.js", "app-def.js", ...domainFiles, "descriptor.json"];
+const names = ["index.html", "style.css", "app.js", "host-info.js", "local-store.js", "app-def.js", ...domainFiles, "descriptor.json"];
 const files = {};
 for (const name of names) files[name] = sha(await readFile(join(out, name)));
 await writeFile(join(out, "release.json"), JSON.stringify({
